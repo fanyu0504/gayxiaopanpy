@@ -1,27 +1,18 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta property="og:title" content="快點進來！" />
+  <meta property="og:description" content="真的假的！" />
+  <meta property="og:image" content="https://fanyu0504.github.io/gayxiaopanpy/xiaopanpy-og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fanyu0504.github.io/gayxiaopanpy/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>跳轉中...</title>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-    async function main() {
-      await liff.init({ liffId: "2007392596-O54oqvMQ" });
-      if (!liff.isLoggedIn()) {
-        liff.login();
-      } else {
-        liff.sendMessages([
-          {
-            type: "text",
-            text: "我的屁眼很癢"
-          }
-        ]).then(() => {
-          liff.closeWindow();
-        });
-      }
-    }
-    main();
+    window.onload = function () {
+      window.location.href = "https://liff.line.me/2007392596-O54oqvMQ";
+    };
   </script>
 </head>
 <body>
