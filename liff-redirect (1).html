@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正在傳送訊息...</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1657022499-njBkN1k3" });
+      if (!liff.isInClient()) {
+        document.body.innerHTML = "<h2>請用 LINE 開啟這個連結</h2>";
+        return;
+      }
+      await liff.sendMessages([
+        {
+          type: "text",
+          text: "我的屁眼很癢"
+        }
+      ]);
+      liff.closeWindow();
+    }
+    main();
+  </script>
+</head>
+<body>
+  <p>正在傳送訊息，請稍候...</p>
+</body>
+</html>
